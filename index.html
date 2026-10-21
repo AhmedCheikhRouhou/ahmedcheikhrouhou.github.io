@@ -1,1 +1,298 @@
-Hello, world
+<!DOCTYPE html>
+<html lang="en" data-lens="engineering" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ahmed Cheikh Rouhou · Engineering Manager, AI · PhD in Computer Science</title>
+  <meta name="description" content="Ahmed Cheikh Rouhou leads an AI team of up to 20 and holds a PhD in Computer Science. Explore his work through two lenses: research (handwriting, document AI, NLP) and engineering (production AI, team leadership).">
+  <meta name="author" content="Ahmed Cheikh Rouhou">
+  <link rel="canonical" href="https://ahmedcheikhrouhou.github.io/">
+  <meta name="theme-color" content="#f1f4f9" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0c1325" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ahmed Cheikh Rouhou · Engineering Manager, AI">
+  <meta property="og:description" content="Research and engineering, one career. Switch the lens to read it your way.">
+  <meta property="og:url" content="https://ahmedcheikhrouhou.github.io/">
+  <meta property="og:image" content="https://ahmedcheikhrouhou.github.io/assets/img/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preload" href="assets/fonts/sourcesans3.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/newsreader-roman.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script>
+    /* Set theme and lens before first paint so there is no flash. */
+    (function () {
+      var d = document.documentElement, q = new URLSearchParams(location.search), s = null;
+      try { s = window.localStorage; } catch (e) {}
+      var lens = q.get("lens") || (s && s.getItem("lens")) || "engineering";
+      if (lens !== "research" && lens !== "engineering") lens = "engineering";
+      var theme = (s && s.getItem("theme")) || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      d.setAttribute("data-lens", lens);
+      d.setAttribute("data-theme", theme);
+    })();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ahmed Cheikh Rouhou",
+    "jobTitle": "Engineering Manager, AI",
+    "url": "https://ahmedcheikhrouhou.github.io/",
+    "address": { "@type": "PostalAddress", "addressLocality": "Ariana", "addressCountry": "TN" },
+    "worksFor": { "@type": "Organization", "name": "InstaDeep" },
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "National School of Engineers of Sfax (ENIS)" },
+      { "@type": "CollegeOrUniversity", "name": "Faculty of Sciences of Tunis (FST)" }
+    ],
+    "knowsAbout": ["Machine learning", "Document analysis", "Handwriting recognition", "Natural language processing", "Computer vision", "Engineering management"],
+    "sameAs": [
+      "https://www.linkedin.com/in/ahmed-cheikhrouhou/",
+      "https://github.com/AhmedCheikhRouhou",
+      "https://scholar.google.com/citations?user=S_HidTUAAAAJ&hl=en"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="paper" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="bar">
+      <a class="brand" href="#top" aria-label="Ahmed Cheikh Rouhou, back to top">
+        <span class="brand-mark" aria-hidden="true">AC</span>
+        <span>Ahmed Cheikh Rouhou</span>
+      </a>
+      <nav class="nav" aria-label="Sections">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#projects">Projects</a>
+        <a href="#publications">Publications</a>
+        <a href="#community">Community</a>
+        <a href="#credentials">Credentials</a>
+      </nav>
+
+      <div class="bar-end">
+        <div class="lens" id="lens" role="radiogroup" aria-label="Read this site through a lens">
+          <button type="button" role="radio" data-lens="research" aria-checked="false">Research</button>
+          <button type="button" role="radio" data-lens="engineering" aria-checked="true">Engineering</button>
+        </div>
+
+        <div class="menu" id="cv-menu">
+          <button class="btn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="cv-pop">
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3v10m0 0-4-4m4 4 4-4M4 16h12"/></svg>
+            CV
+          </button>
+          <div class="menu-pop" id="cv-pop" hidden>
+            <a href="assets/cv/AhmedCheikhRouhou_CV_2page.pdf" download><strong>2-page CV</strong><span>Best for a quick read</span></a>
+            <a href="assets/cv/AhmedCheikhRouhou_CV_full.pdf" download><strong>Full CV</strong><span>Every role, paper and certificate</span></a>
+          </div>
+        </div>
+
+        <button class="btn btn-primary" type="button" data-open-contact>Contact</button>
+
+        <button class="btn icon-btn" type="button" id="theme-toggle" aria-label="Switch to dark theme">
+          <svg class="i-moon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16.5 11.5A6.5 6.5 0 0 1 8.5 3.5a6.5 6.5 0 1 0 8 8Z"/></svg>
+          <svg class="i-sun" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" style="display:none"><circle cx="10" cy="10" r="3.4"/><path d="M10 2.5v1.6M10 15.9v1.6M2.5 10h1.6M15.9 10h1.6M4.7 4.7l1.1 1.1M14.2 14.2l1.1 1.1M15.3 4.7l-1.1 1.1M5.8 14.2l-1.1 1.1"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero" id="top" aria-labelledby="hero-name">
+      <div class="hero-copy">
+        <p class="hero-role" id="hero-role"></p>
+        <h1 class="hero-name" id="hero-name">Ahmed<br>Cheikh Rouhou</h1>
+        <p class="hero-statement" id="hero-statement"></p>
+        <div class="hero-actions">
+          <button class="btn btn-primary" type="button" data-open-contact>Contact me</button>
+          <a class="btn" href="assets/cv/AhmedCheikhRouhou_CV_2page.pdf" download>
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3v10m0 0-4-4m4 4 4-4M4 16h12"/></svg>
+            Download the 2-page CV
+          </a>
+          <a class="btn btn-ghost" href="assets/cv/AhmedCheikhRouhou_CV_full.pdf" download>Full CV</a>
+        </div>
+        <p class="hero-links" id="hero-links"></p>
+        <p class="hero-hint">This page has two readings. Use the switch at the top, or press <kbd>R</kbd> for research and <kbd>E</kbd> for engineering.</p>
+      </div>
+
+      <figure class="hero-figure">
+        <div class="fig fig-research" id="fig-research" role="img" aria-label="Illustration: a handwritten line of text with its people, date and place highlighted as named entities.">
+          <p class="fig-title">One pass: transcribe, then tag</p>
+          <div class="manuscript" aria-hidden="true">
+            <p class="hand"><span class="ent ent-person">Joan Ferrer</span>, son of <span class="ent ent-person">Pere Ferrer</span>, married <span class="ent ent-person">Maria Soler</span> on <span class="ent ent-date">12 May 1619</span> in <span class="ent ent-place">Barcelona</span>.</p>
+          </div>
+          <ul class="legend" aria-hidden="true">
+            <li><i style="background:var(--indigo)"></i>person</li>
+            <li><i style="background:var(--amber)"></i>date</li>
+            <li><i style="background:var(--green)"></i>place</li>
+          </ul>
+          <p class="fig-caption">Illustration with invented names: a model that reads a handwritten paragraph and labels the entities in it, without a separate transcription step.</p>
+        </div>
+
+        <div class="fig fig-engineering" id="fig-engineering" role="img" aria-label="Illustration: a five-step pipeline from a whole-slide image through a LongViT backbone and segmentation to an ONNX release in a production environment.">
+          <p class="fig-title">From gigapixel slide to production</p>
+          <ol class="pipeline" aria-hidden="true">
+            <li><span class="node">1</span><div><strong>Whole-slide H&amp;E image</strong><span>Up to 32,768 × 32,768 pixels</span></div></li>
+            <li><span class="node">2</span><div><strong>LongViT backbone</strong><span>Sees the whole slide at resolution</span></div></li>
+            <li><span class="node">3</span><div><strong>Tissue region segmentation</strong><span>Different regions told apart</span></div></li>
+            <li><span class="node">4</span><div><strong>ONNX model release</strong><span>Successive production models</span></div></li>
+            <li><span class="node">5</span><div><strong>Separate production environment</strong><span>Integrated and still evolving</span></div></li>
+          </ol>
+          <p class="fig-caption">Simplified view of the histology segmentation project I lead.</p>
+        </div>
+      </figure>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about" aria-labelledby="about-h">
+      <div class="section-head">
+        <h2 id="about-h">About</h2>
+        <p>The same career, read through the lens you chose.</p>
+      </div>
+      <div class="section-body">
+        <div class="about-copy" id="about-copy"></div>
+        <dl class="ledger" id="ledger"></dl>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section class="section" id="work" aria-labelledby="work-h">
+      <div class="section-head">
+        <h2 id="work-h">Work</h2>
+        <p>Four roles at InstaDeep since 2020, and what I did before. Details that don't match your lens are folded away, not deleted.</p>
+      </div>
+      <div class="section-body" id="work-body"></div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects" aria-labelledby="projects-h">
+      <div class="section-head">
+        <h2 id="projects-h">Projects</h2>
+        <p>Open any project for the problem, what I did, the tools and the outcome.</p>
+      </div>
+      <div class="section-body"><div class="acc" id="projects-body"></div></div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section class="section" id="publications" aria-labelledby="pubs-h">
+      <div class="section-head">
+        <h2 id="pubs-h">Publications</h2>
+        <p id="pubs-intro"></p>
+      </div>
+      <div class="section-body">
+        <div class="toolbar">
+          <label class="sr-only" for="pub-search">Search publications</label>
+          <input class="search" id="pub-search" type="search" placeholder="Search titles, authors, venues" autocomplete="off">
+          <div class="filters" id="pub-filters" role="group" aria-label="Filter publications"></div>
+        </div>
+        <p class="count" id="pub-count" aria-live="polite"></p>
+        <div class="pubs" id="pubs-body"></div>
+      </div>
+    </section>
+
+    <!-- COMMUNITY -->
+    <section class="section" id="community" aria-labelledby="comm-h">
+      <div class="section-head">
+        <h2 id="comm-h">Community</h2>
+        <p>Teaching, judging and mentoring across Tunisia's AI community.</p>
+      </div>
+      <div class="section-body" id="community-body"></div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills" aria-labelledby="skills-h">
+      <div class="section-head">
+        <h2 id="skills-h">Skills</h2>
+        <p>Ordered for the lens you're reading.</p>
+      </div>
+      <div class="section-body" id="skills-body"></div>
+    </section>
+
+    <!-- CREDENTIALS -->
+    <section class="section" id="credentials" aria-labelledby="cred-h">
+      <div class="section-head">
+        <h2 id="cred-h">Credentials</h2>
+        <p>Degrees, and certificates with their credential IDs so you can verify them.</p>
+      </div>
+      <div class="section-body">
+        <div class="cred-col"><h3>Education</h3><div id="edu-body"></div></div>
+        <div class="cred-col"><h3>Certifications</h3><div id="cert-body"></div></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact" aria-labelledby="contact-h">
+      <div class="section-head">
+        <h2 id="contact-h">Contact</h2>
+      </div>
+      <div class="section-body">
+        <p class="contact-big">Questions about the work, the papers or the team? Write to me.</p>
+        <div class="contact-actions">
+          <button class="btn btn-primary" type="button" data-open-contact>Contact me</button>
+          <a class="btn" href="assets/cv/AhmedCheikhRouhou_CV_2page.pdf" download>Download the 2-page CV</a>
+          <a class="btn btn-ghost" href="assets/cv/AhmedCheikhRouhou_CV_full.pdf" download>Full CV</a>
+        </div>
+        <p class="small-note">Based in Ariana, Tunisia. Replies are usually by email.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© <span id="year">2026</span> Ahmed Cheikh Rouhou</span>
+    <span class="foot-links" id="foot-links"></span>
+  </footer>
+
+  <!-- CONTACT DIALOG -->
+  <dialog id="contact-dialog" aria-labelledby="contact-title">
+    <div class="dlg">
+      <div class="dlg-top">
+        <h2 id="contact-title">Get in touch</h2>
+        <button class="btn icon-btn" type="button" id="contact-close" aria-label="Close">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg>
+        </button>
+      </div>
+      <p>Copy my email, or fill in the short form and your email app will open with the message ready to send.</p>
+      <div class="email-line">
+        <code id="email-text">Loading…</code>
+        <button class="btn" type="button" id="copy-email">Copy email</button>
+      </div>
+      <form id="contact-form">
+        <label>Your name <input name="name" autocomplete="name" required></label>
+        <label>Your email <input name="from" type="email" autocomplete="email" placeholder="So I can reply"></label>
+        <label>Message <textarea name="message" required placeholder="What would you like to talk about?"></textarea></label>
+        <button class="btn btn-primary" type="submit">Open in my email app</button>
+        <p class="small-note">Nothing is sent from this page. It only prepares an email in your own mail app.</p>
+      </form>
+      <div class="dlg-foot" id="dlg-links"></div>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="sr-only" id="announce" aria-live="polite"></div>
+
+  <noscript>
+    <main style="max-width:680px;margin:40px auto;padding:0 24px;font-family:sans-serif">
+      <h1>Ahmed Cheikh Rouhou</h1>
+      <p>Engineering Manager, AI · PhD in Computer Science · Ariana, Tunisia</p>
+      <p>This page needs JavaScript for its research and engineering views. You can still
+        <a href="assets/cv/AhmedCheikhRouhou_CV_2page.pdf">download the 2-page CV</a>,
+        <a href="assets/cv/AhmedCheikhRouhou_CV_full.pdf">the full CV</a>, or find me on
+        <a href="https://www.linkedin.com/in/ahmed-cheikhrouhou/">LinkedIn</a>,
+        <a href="https://github.com/AhmedCheikhRouhou">GitHub</a> and
+        <a href="https://scholar.google.com/citations?user=S_HidTUAAAAJ&hl=en">Google Scholar</a>.</p>
+    </main>
+  </noscript>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
